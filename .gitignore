@@ -401,3 +401,4 @@ FodyWeavers.xsd
 EMT-Class-Server/bin
 EMT-Class-Server/bin
 EMT-Class-Server/bin
+*.user
