@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EMT-Class-Server.props" />
+</Project>

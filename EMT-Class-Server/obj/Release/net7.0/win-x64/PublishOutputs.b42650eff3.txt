@@ -1,0 +1,7 @@
+C:\Users\Logan\VisualStudio\GCEAS-EMT-Class\EMT-Class-Server\obj\Release\net7.0\win-x64\PubTmp\Out\EMT-Class-Server.exe
+C:\Users\Logan\VisualStudio\GCEAS-EMT-Class\EMT-Class-Server\obj\Release\net7.0\win-x64\PubTmp\Out\appsettings.Development.json
+C:\Users\Logan\VisualStudio\GCEAS-EMT-Class\EMT-Class-Server\obj\Release\net7.0\win-x64\PubTmp\Out\appsettings.json
+C:\Users\Logan\VisualStudio\GCEAS-EMT-Class\EMT-Class-Server\obj\Release\net7.0\win-x64\PubTmp\Out\EMT-Class-Server.dll
+C:\Users\Logan\VisualStudio\GCEAS-EMT-Class\EMT-Class-Server\obj\Release\net7.0\win-x64\PubTmp\Out\EMT-Class-Server.deps.json
+C:\Users\Logan\VisualStudio\GCEAS-EMT-Class\EMT-Class-Server\obj\Release\net7.0\win-x64\PubTmp\Out\EMT-Class-Server.runtimeconfig.json
+C:\Users\Logan\VisualStudio\GCEAS-EMT-Class\EMT-Class-Server\obj\Release\net7.0\win-x64\PubTmp\Out\EMT-Class-Server.pdb
