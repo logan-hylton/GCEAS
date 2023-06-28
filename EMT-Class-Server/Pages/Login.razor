@@ -72,7 +72,7 @@
 
     private SignupModel signupModel = new();
 
-    private string ErrorMessage = null;
+    private string? ErrorMessage = null;
 
     private enum AuthenticationType
     {
@@ -86,13 +86,9 @@
         Logger.LogInformation($"HandleLogin called with values: {loginModel.Email}, {loginModel.Password}");
         if (loginModel.Email != null && loginModel.Password != null)
         {
-            try
+            if (!((CustomAuthenticationStateProvider)AuthenticationStateProvider).AuthenticateUser(loginModel.Email, loginModel.Password))
             {
-                ((CustomAuthenticationStateProvider)AuthenticationStateProvider).AuthenticateUser(loginModel.Email, loginModel.Password);
-            }
-            catch (Exception e)
-            {
-                ErrorMessage = "Login Failed.";
+                ErrorMessage = "Login Failed";
             }
         }
     }

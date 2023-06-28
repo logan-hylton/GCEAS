@@ -22,7 +22,7 @@ namespace EMT_Class_Server
             return Task.FromResult(new AuthenticationState(user));
         }
 
-        public void AuthenticateUser(string email, string password)
+        public bool AuthenticateUser(string email, string password)
         {
             SqlConnection cnn;
             SqlCommand sqlCommand;
@@ -50,7 +50,7 @@ namespace EMT_Class_Server
 
             if (result != PasswordVerificationResult.Success)
             {
-                throw new Exception("Login failed.");
+                return false;
             }
 
             var identity = new ClaimsIdentity(new[]
@@ -61,6 +61,7 @@ namespace EMT_Class_Server
             var user = new ClaimsPrincipal(identity);
 
             NotifyAuthenticationStateChanged(Task.FromResult(new AuthenticationState(user)));
+            return true;
         }
     }
 }
