@@ -18,6 +18,10 @@
                     <ValidationSummary />
                     <InputText @bind-Value="loginModel.Email" placeholder="Email" class="mt-2 mb-2" /><br/>
                     <InputText @bind-Value="loginModel.Password" placeholder="Password" class="mb-2" /><br/>
+                    @if (ErrorMessage != null)
+                    {
+                        <p style="color: red;">@ErrorMessage</p>
+                    }
                     <button class="btn btn-primary mt-2" type="submit">Login</button>
                 </EditForm>
             </div>
@@ -68,6 +72,8 @@
 
     private SignupModel signupModel = new();
 
+    private string ErrorMessage = null;
+
     private enum AuthenticationType
     {
         Login,
@@ -80,7 +86,14 @@
         Logger.LogInformation($"HandleLogin called with values: {loginModel.Email}, {loginModel.Password}");
         if (loginModel.Email != null && loginModel.Password != null)
         {
-            ((CustomAuthenticationStateProvider)AuthenticationStateProvider).AuthenticateUser(loginModel.Email, loginModel.Password);
+            try
+            {
+                ((CustomAuthenticationStateProvider)AuthenticationStateProvider).AuthenticateUser(loginModel.Email, loginModel.Password);
+            }
+            catch (Exception e)
+            {
+                ErrorMessage = "Login Failed.";
+            }
         }
     }
 }

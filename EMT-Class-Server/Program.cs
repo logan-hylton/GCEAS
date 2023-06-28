@@ -2,6 +2,7 @@ using EMT_Class_Server.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace EMT_Class_Server
 {
@@ -15,7 +16,7 @@ namespace EMT_Class_Server
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
 
-            builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
+            builder.Services.AddSingleton<AuthenticationStateProvider, CustomAuthenticationStateProvider>(serviceProvider => new CustomAuthenticationStateProvider("Data Source=emt-class.lhylton.com;Initial Catalog=EmtClass;User ID=gceas;Password=~4kL9i2g7"));
 
             builder.Services.AddSingleton<WeatherForecastService>();
 
