@@ -396,3 +396,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+
+EMT-Class-Server/bin
+EMT-Class-Server/bin
+EMT-Class-Server/bin
